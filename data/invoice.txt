@@ -1,0 +1,23 @@
+Order number 0 
+Customer: pietie paas haas 
+Email: pieter@paasfontein.com 
+Phone number: 784 5879 214 
+Location: Lenasia 
+
+You have ordered the following from Spicy Foods in Johannesburg:
+
+4 x Lamb Masala (R89,00) 
+10 x Veggie Rotties (R45,00) 
+
+----------------------------
+Total: R806,00 
+----------------------------
+
+Special instructions: 
+Make it extra spicy!!! 
+Spike Fenton is nearest to the restaurant and so he will be delivering your 
+order to you at: 
+45 Rainbow road
+Lenasia South
+
+If you need to contact the restaurant, their number is 047 859 5614.
