@@ -1,7 +1,11 @@
 import java.awt.Desktop;
+import java.io.IOException;
 import java.net.URL;
 import java.util.Formatter;
 import java.util.ResourceBundle;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.Logger;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -22,17 +26,15 @@ public class NoDriverUIController implements Initializable {
   
 
   // generate the notice to customer if no driver is available
-  public  String noDriverNotice() {
+  public  String noDriverNotice() throws SecurityException, IOException {
 	
     String noticeTxt = "Sorry! Our drivers are too far away from you to be " +
       "able to deliver to your location.";
 
-    try {
+    try (Formatter writer = new Formatter("data/invoice.txt")) {
 
       //write the message to the invoice
-      Formatter writer = new Formatter("data/invoice.txt");
       writer.format("%s", noticeTxt);
-      writer.close();
 
       //if all went well, return the message url to the GUI for the open 
       //notification button 			
@@ -40,14 +42,15 @@ public class NoDriverUIController implements Initializable {
 
     } catch (Exception e) {
       //Something went wrong
-      return "Error";
-
+		Handler handler = new FileHandler("data/errors.log");
+		Logger.getLogger("Invoices file not found").addHandler(handler);
+		return "Notification could not be generated";
     }
 
   }
 
 //handle click on download 
-  public void handleBtnDownloadNote() {
+  public void handleBtnDownloadNote() throws SecurityException, IOException {
     //generate the notice and get the file path
 	  String theNoteUrl = noDriverNotice();
 	  

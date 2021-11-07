@@ -1,5 +1,7 @@
+import java.io.IOException;
 import java.util.Formatter;
 import java.util.List;
+import java.util.Random;
 
 //implementing the Singleton pattern!
 //Ref https://dev.to/devtony101/javafx-3-ways-of-passing-information-between-scenes-1bm8 
@@ -10,9 +12,9 @@ public class Invoice {
 	  private Restaurant restaurant;
 	  private Driver driver;	
 	  private List < OrderItem > orderItems;
-	  private final static Invoice INSTANCE = new Invoice();
+	  private static final Invoice INSTANCE = new Invoice();
 	  private int orderNumber;
-	  private InvoiceRecords invoiceRecords = new InvoiceRecords();
+	  
 	  
 	  private Invoice() {}
 	  
@@ -50,15 +52,15 @@ public class Invoice {
 		    return this.orderItems;
 	}
 	  
+	  private Random r = new Random();
 	  // create order number 
-	  protected int genOrderNumber() {
-	    int orderNumber = (int)(Math.random() * 10000) + 1;
-	    return orderNumber;
+	  protected int genOrderNumber() {		  
+		  return r.nextInt(10000);
 	  }
 
 	  // method to calculate total 
 	  protected String genTotal() {
-	    List < OrderItem > orderItems = this.orderItems;
+
 	    double orderTotal = 0.00;
 	    for (OrderItem item: orderItems) {
 	      orderTotal += item.getPrice() * item.getQuantity();
@@ -68,19 +70,27 @@ public class Invoice {
 
 	  // method to concatenate ordered items list
 	  protected String genItemString() {
-	    List < OrderItem > orderItems = this.orderItems;
-	    String itemString = "";
+
+		StringBuilder bld = new StringBuilder();
 	    for (OrderItem item: orderItems) {
-	      itemString += item.toString();
-	    };
-	    return itemString;
+	    	bld.append(item.toString());
+	    }
+	    return bld.toString();
 	  }
 
 	  // method to build the invoice
-	  public String generate() {
+	  public String generate() throws SecurityException, IOException {
 
+		orderNumber  = genOrderNumber(); 
+		
+		InvoiceRecords invoiceRecords  = new InvoiceRecords();
 	    //save record of invoice to text file
-	    invoiceRecords.saveToFile(this.orderNumber, this.customer.getName(), this.restaurant.getCity());
+	    try {
+			invoiceRecords.saveToFile(this.orderNumber, this.customer.getName(), this.restaurant.getCity());
+		} catch (SecurityException | IOException e1) {
+			
+			e1.printStackTrace();
+		}
 
 	    //append all the invoice lines into one string
 	    String invoiceTxt = "" +
@@ -101,11 +111,9 @@ public class Invoice {
 	      "\r\n\r\n" +
 	      "If you need to contact the restaurant, their number is " + this.restaurant.getphoneNumber() + ".\n";
 
-	    try {
-	      //dump the string into a file
-	      Formatter writer = new Formatter("data/invoice.txt");
+	    try (Formatter writer = new Formatter("data/invoice.txt")) {
+	      //dump the string into a file	      
 	      writer.format("%s", invoiceTxt);
-	      writer.close();
 
 	      //if all went well, return the invoice url to the GUI for the open 
 	      //invoice button

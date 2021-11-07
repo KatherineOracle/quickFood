@@ -17,7 +17,6 @@ public class DriverUIController extends UIController implements Initializable {
   @FXML
   private Button btnPairDriver;
 
-  private Driver driver;
 
   public void handleBtnPairDriver(ActionEvent event) throws IOException {
 
@@ -33,14 +32,14 @@ public class DriverUIController extends UIController implements Initializable {
 
       //We have a match! Appoint the driver and move onto the next panel
       //hide the current panel
-      driver = drivers.appoint(textRestaurantCity);
+    	Driver driver = drivers.appoint(textRestaurantCity);
       
       //pass driver info to the invoice instance (constant)
       Invoice invoice = Invoice.getInstance();
       invoice.setDriver(driver);        
       
       //super class function to go to the next scene
-      changeScene("RestaurantUI.fxml", event);
+      changeScene("fxml/RestaurantUI.fxml", event);
 
 
     } else {
@@ -51,7 +50,7 @@ public class DriverUIController extends UIController implements Initializable {
       holder.setDriver(new Driver(null, textRestaurantCity, 0));  
       
       //super class function to go to the "Sorry No Driver" scene
-      changeScene("NoDriverUI.fxml", event);
+      changeScene("fxml/NoDriverUI.fxml", event);
 
     }
 
@@ -62,6 +61,6 @@ public class DriverUIController extends UIController implements Initializable {
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
-    // TODO
+	// Controller must implement an initialize method
   }
 }

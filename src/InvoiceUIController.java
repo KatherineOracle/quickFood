@@ -1,4 +1,5 @@
 import java.awt.Desktop;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -19,7 +20,7 @@ public class InvoiceUIController implements Initializable {
   private Invoice invoice  =  Invoice.getInstance();
 
 
-  public void handleBtnDownloadInvoice() {
+  public void handleBtnDownloadInvoice() throws SecurityException, IOException {
 	  
     //Generate the invoice and get the file path	  
 	String theInvoiceUrl = invoice.generate();
@@ -37,8 +38,7 @@ public class InvoiceUIController implements Initializable {
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
-    // TODO
-
+	// Controller must implement an initialize method
   }
 
 }

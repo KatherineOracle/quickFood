@@ -1,23 +1,21 @@
-Order number 0 
-Customer: pietie paas haas 
-Email: pieter@paasfontein.com 
-Phone number: 784 5879 214 
-Location: Lenasia 
+Order number 5719 
+Customer: sdsa 
+Email: da 
+Phone number: dsad 
+Location: dsa 
 
-You have ordered the following from Spicy Foods in Johannesburg:
+You have ordered the following from adfs in Durban:
 
-4 x Lamb Masala (R89,00) 
-10 x Veggie Rotties (R45,00) 
+21 x sdad (R34,00) 
 
 ----------------------------
-Total: R806,00 
+Total: R714,00 
 ----------------------------
 
 Special instructions: 
-Make it extra spicy!!! 
-Spike Fenton is nearest to the restaurant and so he will be delivering your 
+dadsa 
+Umayr Rawlings is nearest to the restaurant and so he will be delivering your 
 order to you at: 
-45 Rainbow road
-Lenasia South
+dsa
 
-If you need to contact the restaurant, their number is 047 859 5614.
+If you need to contact the restaurant, their number is fds.

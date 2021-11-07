@@ -7,3 +7,7 @@
 8851, dfdsdf, Johannesburg
 10, Katryn ScarySpice, Bloemfontein
 10, pietie paas haas, Johannesburg
+10, Katherine, Durban
+10, fsgfdg, Durban
+-58405710, fdsf, Bloemfontein
+5729, sdsa, Durban

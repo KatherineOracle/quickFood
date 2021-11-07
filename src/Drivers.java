@@ -1,20 +1,27 @@
 import java.io.File; // Import the File class
 import java.io.FileNotFoundException; // Import this class to handle errors
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner; // Import the Scanner class to read text files
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.Logger;
 import java.util.Comparator;
 import java.util.Formatter;
-import java.util.stream.Collectors;
+
+
 import java.util.List;
 import java.util.Optional;
 
 public class Drivers {
+	
+	
 
 	// properties
 	private List<Driver> driverList = new ArrayList<>();
 
 	// constructor
-	public Drivers() {
+	public Drivers() throws SecurityException, IOException {
 
 		// read through the driver text file and create a driver object from each row
 
@@ -39,7 +46,8 @@ public class Drivers {
 
 		} catch (FileNotFoundException e) {
 
-			System.out.println("Driver file not found");
+			Handler handler = new FileHandler("data/errors.log");
+			Logger.getLogger("Driver file not found").addHandler(handler);
 
 		}
 
@@ -66,7 +74,7 @@ public class Drivers {
 	}
 
 	private void saveToFile() {
-		try (Formatter writer = new Formatter("data/drivers.txt")) {
+		try (Formatter writer = new Formatter("data/drivers-info.txt")) {
 			// dump the string into a file
 
 			this.driverList.forEach(driver -> writer.format("%s%n", driver.toString()));
@@ -86,8 +94,7 @@ public class Drivers {
 		List<Driver> sortedList;
 		sortedList = driverList.stream().sorted(Comparator.comparing(Driver::getLoad))
 				.filter(d -> d.getCity().equals(textRestaurantCity))
-				// Linter suggestion breaks the code. Help???
-				.collect(Collectors.toList());
+				.toList();
 
 		// get the driver at top of list
 		Driver appointed = sortedList.get(0);

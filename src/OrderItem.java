@@ -14,9 +14,8 @@ public class OrderItem {
 
   // return the ordered item as string to invoice object and to the GUI
   public String toString() {
-    String itemString = this.quantity + " x " + this.meal +
+    return this.quantity + " x " + this.meal +
       " (R" + String.format("%.2f", this.price) + ") \n";
-    return itemString;
   }
 
   // invoice will use getters below to calculate the total

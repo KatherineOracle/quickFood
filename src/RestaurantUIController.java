@@ -25,7 +25,6 @@ public class RestaurantUIController extends UIController implements Initializabl
   @FXML
   private Label lblAppointedDriverName;
 
-  private Restaurant restaurant;
   Invoice invoice = Invoice.getInstance();
 
 
@@ -38,14 +37,14 @@ public class RestaurantUIController extends UIController implements Initializabl
     String textRestaurantPhone = textPhoneRestaurant.getText().trim();
 
     //create the restaurant object
-    restaurant = new Restaurant(textRestaurantName, textRestaurantAddress, textRestaurantCity, textRestaurantPhone);
+    Restaurant restaurant = new Restaurant(textRestaurantName, textRestaurantAddress, textRestaurantCity, textRestaurantPhone);
     
     //store restaurant in the invoice instance
-    Invoice invoice = Invoice.getInstance();
+    invoice = Invoice.getInstance();
     invoice.setRestaurant(restaurant); 
     
     //super class function to go to the next scene
-    changeScene("OrderItemsUI.fxml", event);    
+    changeScene("fxml/OrderItemsUI.fxml", event);    
 
   }
 
@@ -54,7 +53,7 @@ public class RestaurantUIController extends UIController implements Initializabl
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
-    // message to confirm selected drive on scene initialisation
+    // message to confirm selected drive on scene initialization
 	  lblAppointedDriverName.setText(invoice.getDriver().getName()+" will deliver your order");
   }
 
