@@ -20,7 +20,7 @@ public class Drivers {
     // read through the driver text file and create a driver object from each row
 
     try {
-      File driverSrc = new File("data/drivers.txt");
+      File driverSrc = new File("data/drivers-info.txt");
       Scanner sc = new Scanner(driverSrc);
 
       while (sc.hasNextLine()) {
