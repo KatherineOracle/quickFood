@@ -27,11 +27,11 @@ public class OrderItemsUIController extends UIController implements Initializabl
   @FXML
   private Button btnChangeScene;
 
-  private List < OrderItem > theOrderItems = new ArrayList < OrderItem > ();
+  private List < OrderItem > theOrderItems = new ArrayList <> ();
 
 
-  public void handleBtnAddItem(ActionEvent event) throws IOException {
-    System.out.println("adding items");
+  public void handleBtnAddItem() {
+
     //trim up the user input
     String itemName = textMenuItem.getText().trim();
     int itemQuantity = Integer.parseInt(textMenuQuantity.getText().trim());
@@ -55,14 +55,14 @@ public class OrderItemsUIController extends UIController implements Initializabl
  //function to convert list into printable string
   private String listify() {
 
-    String listString = "";
+	StringBuilder bld = new StringBuilder();
 
     for (OrderItem item: theOrderItems) {
 
-      listString += item.toString();
+    	bld.append(item.toString());
     }
 
-    return listString;
+    return bld.toString();
   }
 
   //handle change on "Continue" button click  
@@ -73,7 +73,7 @@ public class OrderItemsUIController extends UIController implements Initializabl
 	invoice.setOrderItems(theOrderItems);  	
 	
 	//super class function to go to the next scene
-	changeScene("CustomerUI.fxml", event);
+	changeScene("fxml/CustomerUI.fxml", event);
 
 
   }
@@ -82,7 +82,7 @@ public class OrderItemsUIController extends UIController implements Initializabl
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
-    // TODO
+	// Controller must implement an initialize method
   }
 
 }

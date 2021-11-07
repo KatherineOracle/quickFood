@@ -20,11 +20,10 @@ public class Customer {
 
   //method to return customer details in a string
   public String toString() {
-    String customerString = "Customer: " + this.name + " \n" +
+    return "Customer: " + this.name + " \n" +
       "Email: " + this.email + " \n" +
       "Phone number: " + this.phoneNumber + " \n" +
       "Location: " + this.city + " \n";
-    return customerString;
   }
 
   //return street address to invoice	

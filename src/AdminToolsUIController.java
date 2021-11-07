@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -20,7 +19,7 @@ public class AdminToolsUIController implements Initializable {
   private Label lblError;
 
   //handle click on "Orders by customer name button"
-  public void handleBtnCustomersAlphabetical(ActionEvent event) throws IOException {
+  public void handleBtnCustomersAlphabetical() throws IOException {
 
 	//load invoice records to object  
     InvoiceRecords allInvoices = new InvoiceRecords();
@@ -44,7 +43,7 @@ public class AdminToolsUIController implements Initializable {
   }
 
   //handle click on "Orders by location"  
-  public void handleBtnCustomersLocation(ActionEvent event) throws IOException {
+  public void handleBtnCustomersLocation() throws IOException {
 
 	//load invoice records to object
     InvoiceRecords allInvoices = new InvoiceRecords();
@@ -72,7 +71,7 @@ public class AdminToolsUIController implements Initializable {
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
-    // TODO
+    // Controller must implement an initialize method
   }
 
 }

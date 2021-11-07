@@ -18,12 +18,12 @@ public class StartUIController extends UIController implements Initializable {
 
   public void handleBtnCustomer(ActionEvent event) throws IOException {
 
-    changeScene("DriverUI.fxml", event);
+    changeScene("fxml/DriverUI.fxml", event);
   }
 
   public void handleBtnAdministrator(ActionEvent event) throws IOException {
 
-    changeScene("AdminToolsUI.fxml", event);
+    changeScene("fxml/AdminToolsUI.fxml", event);
 
   }
 
@@ -33,7 +33,7 @@ public class StartUIController extends UIController implements Initializable {
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
-    // TODO
+	// Controller must implement an initialize method
   }
 
 }

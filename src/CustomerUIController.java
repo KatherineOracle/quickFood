@@ -27,7 +27,6 @@ public class CustomerUIController extends UIController implements Initializable 
   @FXML
   private Button btnCreateCustomer;
 
-  private Customer customer;
 
   //handle click on the "Complete order" button  
   public void handleBtnCreateCustomer(ActionEvent event) throws IOException {
@@ -41,14 +40,14 @@ public class CustomerUIController extends UIController implements Initializable 
     String customerInstructions = textInstructionsCustomer.getText();
 
     //create a customer from field data
-    customer = new Customer(customerName, customerAddress, customerCity, customerPhone, customerEmail, customerInstructions);
+    Customer customer = new Customer(customerName, customerAddress, customerCity, customerPhone, customerEmail, customerInstructions);
     
     //store the customer to the invoice instance (constant)
     Invoice invoice = Invoice.getInstance();
     invoice.setCustomer(customer);  
     
     //super class function to go to the next scene
-    changeScene("InvoiceUI.fxml", event);
+    changeScene("fxml/InvoiceUI.fxml", event);
 
   }
 
@@ -57,7 +56,7 @@ public class CustomerUIController extends UIController implements Initializable 
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
-    // TODO
+	// Controller must implement an initialize method
   }
 
 }

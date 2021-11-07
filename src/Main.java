@@ -13,7 +13,7 @@ public class Main extends Application {
     stage.setTitle("QuickFood app");
 
     //load up the first scene
-    Parent root = FXMLLoader.load(getClass().getResource("StartUI.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("fxml/StartUI.fxml"));
     Scene scene = new Scene(root);
     stage.setScene(scene);
     stage.show();
@@ -23,4 +23,5 @@ public class Main extends Application {
   public static void main(String[] args) {
     launch(args);
   }
+  
 }
