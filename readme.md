@@ -1,5 +1,4 @@
-As per recommendation by reviewer "GodknowsSibelo" I got into JavaFX and SceneBuilder
-and rebuilt this app (previously swing elements)
+# QuickFood - it became a JavaFX experiment!
 
 Thank you for reviewing my work - again. 
 
@@ -7,8 +6,8 @@ Following an interview and secondary review by HyperionDev Technical Quality Spe
 it was assertained that my work was my own.
 
 Furthermore it was recommended by Ronald that I:
-1. Scribe this readme file
-2. use Maven to package my project 
+1 Scribe this readme file
+2 use Maven to package my project 
 
 ## Installation
 
@@ -35,7 +34,8 @@ For both, click through to the "Administrator" scene in the GUI, related code up
     - quickfood\src\main\java\kv\hyperiondev\java\quickfood\InvoiceRecord.java
     - quickfood\src\main\java\kv\hyperiondev\java\quickfood\Invoice.java (line 88)
 
-3. Updates the original drivers.txt file to add to their load if they have been matched with a customer. See:
+3. Updates the original drivers.txt file to add to their load if they have been matched with a customer. 
+See:
     - quickfood\src\main\java\kv\hyperiondev\java\quickfood\Driver.java (line 34)
     - quickfood\src\main\java\kv\hyperiondev\java\quickfood\Drivers.java (line 105 and 108)
 
