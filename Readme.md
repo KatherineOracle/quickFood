@@ -1,4 +1,5 @@
-# QuickFood - it became a JavaFX experiment!
+As per recommendation by reviewer "GodknowsSibelo" I got into JavaFX and SceneBuilder
+and rebuilt this app (previously swing elements)
 
 Thank you for reviewing my work - again. 
 
