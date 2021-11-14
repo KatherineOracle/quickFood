@@ -6,8 +6,8 @@ Following an interview and secondary review by HyperionDev Technical Quality Spe
 it was assertained that my work was my own.
 
 Furthermore it was recommended by Ronald that I:
-1 Scribe this readme file
-2 use Maven to package my project 
+1. Scribe this readme file
+2. use Maven to package my project 
 
 ## Installation
 
