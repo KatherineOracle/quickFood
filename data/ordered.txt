@@ -1,14 +1,9 @@
-10, Katryn ScarySpice, Bloemfontein
--58405710, fdsf, Bloemfontein
-101, Mary Quite Contrary, Cape Town
-597, Vinny de FluffBottoms, Durban
-453, King Tuttenkamen, Durban
-4781, vfdagd, Durban
 929, dfasfd, Durban
-10, Katherine, Durban
-10, fsgfdg, Durban
-5729, sdsa, Durban
-6128, Jerry Manso, Durban
-49, Kujo Baron, Johannesburg
 8851, dfdsdf, Johannesburg
+10, Katryn ScarySpice, Bloemfontein
+453, King Tuttenkamen, Durban
+49, Kujo Baron, Johannesburg
+101, Mary Quite Contrary, Cape Town
 10, pietie paas haas, Johannesburg
+4781, vfdagd, Durban
+597, Vinny de FluffBottoms, Durban
