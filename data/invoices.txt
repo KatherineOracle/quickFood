@@ -11,5 +11,3 @@
 10, fsgfdg, Durban
 -58405710, fdsf, Bloemfontein
 5729, sdsa, Durban
-6128, Jerry Manso, Durban
-9516, Peter Parker, Springbok
