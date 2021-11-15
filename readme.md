@@ -39,7 +39,7 @@ See:
     - quickfood\src\main\java\kv\hyperiondev\java\quickfood\Driver.java (line 34)
     - quickfood\src\main\java\kv\hyperiondev\java\quickfood\Drivers.java (line 105 and 108)
 
-4. Make use of:
+4. Makes use of:
     - Exception handling with try catch blocks (at least two)
     - code debugged
     - good indentation
