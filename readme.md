@@ -40,11 +40,11 @@ See:
     - quickfood\src\main\java\kv\hyperiondev\java\quickfood\Drivers.java (line 105 and 108)
 
 Make use of:
-    - Exception handling with try catch blocks (at least two)
-    - code debugged
-    - good indentation
-    - strict naming conventions
-    - refactoring    
+- Exception handling with try catch blocks (at least two)
+- code debugged
+- good indentation
+- strict naming conventions
+- refactoring    
 
 ---
 
